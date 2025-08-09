@@ -16,7 +16,7 @@ const Mainbar = () => {
       <div className="mainbar">
 
         <div className="tab-container">
-          <div className="tab active">RESULTS–PHASED</div>
+          <div className="tab">RESULTS–PHASED</div>
           <div className="tab">OVERRIDES–PHASED</div>
         </div>
 
@@ -24,22 +24,29 @@ const Mainbar = () => {
       <div className="BoxA">
         <div className="form-section">
           <div className="input-group">
-            <label>Title:</label> <input type="text" />
-            <label>Unique ID:</label><input type="text" />
+            <label style={{paddingLeft:"20px",paddingRight:"17px"}}>Title:</label><input type="text" style={{ width: "300px" }} />
+
+            <label style={{paddingLeft:"20px",paddingRight:"10px"}}>Unique ID:</label><input type="text" style={{ width: "300px" }} />
+          
           </div>
 
+<br/>
           <div className="input-group">
-            <label>CES#:</label><input type="text" />
-            <label>PE Value:</label><input type="text" />
-            <label>WBS#:</label><input type="text" />
+           <label style={{paddingLeft:"20px",paddingRight:"5px"}}>CES#:</label><input type="text" style={{ width: "200px" }} />
+           <label style={{paddingLeft:"20px",paddingRight:"5px"}}>PE Value:</label><input type="text" style={{ width: "160px" }} />
+          <label style={{paddingLeft:"20px",paddingRight:"5px"}}>WBS#:</label><input type="text" style={{ width: "170px" }} />
+            
           </div>
+          <br/>
         </div>
 
         <div className="icon">
-        <div className="tool"><img src={vector1}/></div>
-        <div className="tool"><img src={vector2}/></div>
-        <div className="tool"><img src={timeLogo}/></div>
-        <div className="tool"><img src={calenderLogo}/></div>
+         <div className="tool"><img src={timeLogo}/></div>
+          <div className="tool" style={{ filter: "brightness(0.8)" }}><img src={calenderLogo}/></div>
+        <div className="tool" style={{ filter: "brightness(0.2)" }}><img src={vector1}/></div>
+        <div className="tool" style={{ filter: "brightness(0.2)" }}><img src={vector2}/></div>
+       
+       
         </div>
 
       </div>

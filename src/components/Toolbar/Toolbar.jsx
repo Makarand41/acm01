@@ -27,17 +27,24 @@ const Toolbar = () => {
       {/* View Section */}
       <div className="vsection">
         <div className="vtools">
-          <div className="tool"><img src={Phased} alt="Phased" /><span>Phased</span></div>
-          <div className="tool"><img src={Learning} alt="Learning" /><span>Learning</span></div>
-          <div className="tool"><img src={Narrative} alt="Narrative" /><span>Narrative</span></div>
-          <div className="tool"><img src={CustomColumns} alt="Custom Columns" /><span>Custom<br />Columns</span></div>
-          <div className="tool"><img src={RiskStatistics} alt="Risk Statistics" /><span>RISK<br />Statistics</span></div>
-          <div className="tool"><img src={WhatIf} alt="What If" /><span>What-if</span></div>
-          <div className="tool"><img src={Delta} alt="Delta" /><span>Delta</span></div>
-          <div className="tool"><img src={Inflation} alt="Inflation" /><span>Inflation</span></div>
-          <div className="tool"><img src={Documentation} alt="Documentation" /><span>Documentation</span></div>
-          <div className="tool"><img src={InputSheets} alt="Input Sheets" /><span>Input Sheets</span></div>
-          <div className="tool"><img src={More} alt="More" /><span>More</span></div>
+          <div className="tool"><img src={Phased}  />Phased</div>
+          <div className="tool"><img src={Learning}  />Learning</div>
+          <div className="tool"><img src={Narrative} />Narrative</div>
+          <div className="tool"><img src={CustomColumns}  />Custom<br />Columns</div>
+          <div className="tool"><img src={RiskStatistics}  />RISK<br />Statistics</div>
+          <div className="tool"><img src={WhatIf}  />What-if</div>
+          <div className="tool"><img src={Delta}  />Delta</div>
+          <div className="tool" style={{ marginRight: '25px' }}><img src={Inflation}  />Inflation</div>
+          
+
+
+        <div className="tool" style={{ marginRight: '22px' }}>
+          <img src={Documentation} />Documentation
+        </div>
+
+
+          <div className="tool"><img src={InputSheets}  />Input Sheets</div>
+          <div className="tool"><img src={More}  />More</div>
         </div>
         <div className="vsection-title">View</div>
       </div>
@@ -46,8 +53,8 @@ const Toolbar = () => {
       {/* Organize Section */}
       <div className="osection">
         <div className="otools">
-          <div className="tool"><img src={Favourites} alt="Favourites" /><span>Favorites</span></div>
-          <div className="tool"><img src={ManageSheets} alt="Manage Sheets" /><span>Manage<br />Sheets</span></div>
+          <div className="tool" style={{ marginRight: '16px' }}><img src={Favourites} />Favorites</div>
+          <div className="tool"><img src={ManageSheets}  />Manage<br />Sheets</div>
         </div>
         <div className="osection-title">Organize</div>
       </div>
@@ -56,8 +63,8 @@ const Toolbar = () => {
        {/* Custom Reports Section */}
       <div className="crsection">
         <div className="crtools">
-          <div className="tool"><img src={DesignNewReports} alt="Design New Reports" /><span>Design <br/>New Reports</span></div>
-          <div className="tool"><img src={ImportReports} alt="Import Reports" /><span>Import<br />Reports</span></div>
+          <div className="tool" style={{ marginRight: '20px',marginLeft: '20px' }} ><img src={DesignNewReports}/>Design New&nbsp;Reports</div>
+          <div className="tool" style={{ marginLeft: '7px'}}><img src={ImportReports} />Import<br />Reports</div>
         </div>
         <div className="crsection-title custom">Custom Reports</div>
       </div>

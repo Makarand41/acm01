@@ -1,9 +1,17 @@
+.mainbar {
+  display: flex;
+  flex-direction: column; /* ✅ Stack tabs and title vertically */
+  width: 100%;
+}
+
+
 .tab-container {
   display: flex;
   width: 100%;
   font-family: Arial, sans-serif;
 height: 50px;
 margin-bottom: 20px;
+font-weight: bold;
 }
 
 
@@ -15,15 +23,13 @@ margin-bottom: 20px;
   font-weight: 600;
   color: #121212;
   background-color: #fdfefb;
-  /* Light background by default */
   transition: background-color 0.3s, color 0.3s;
   border: 1px solid #000000;
-padding: 10px 0; /*
+  padding: 10px 0; 
 }
 
-.tab.active {
-  background-color: #ECEFCA;
-  /* Blue active background */
+.tab:hover{
+   background-color: rgb(179, 179, 221);
   color: #000000;
   border: 1px solid #000000;
 }
@@ -32,15 +38,12 @@ padding: 10px 0; /*
 
 
 
-.mainbar {
-  display: flex;
-  flex-direction: column; /* ✅ Stack tabs and title vertically */
-  width: 100%;
-}
 
 
 .icon{
   display: flex;
+  
+
 }
 
 .BoxA{
@@ -50,4 +53,5 @@ padding: 10px 0; /*
 
 .A1{
   display: flex;
+  margin-left: 900px;
 }

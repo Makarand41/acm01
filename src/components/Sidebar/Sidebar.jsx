@@ -1,46 +1,35 @@
 import React, { useState } from 'react';
 import items from './sidebarData';
+import './Sidebar.css';
+
 const Sidebar = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [openSubIndex, setOpenSubIndex] = useState(null);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
-    setOpenSubIndex(null); // close sub-accordion when switching main
+    setOpenSubIndex(null);
   };
 
   const toggleSub = (index) => {
     setOpenSubIndex(openSubIndex === index ? null : index);
   };
 
-  
-
-
   return (
-    <div style={{ width: '300px', border: '1px solid #ccc', fontFamily: 'sans-serif' }}>
-      <div style={{ background: '#ddd', padding: '10px', fontWeight: 'bold' }}>
-        Session Explorer - Estimate
-      </div>
+    <div className="sidebar">
+      <div className="sidebar-header">Session Explorer - Estimate</div>
 
       {items.map((item, index) => (
         <div key={index}>
           {/* Accordion Header */}
           <div
             onClick={() => toggle(index)}
-            style={{
-              padding: '10px',
-              background: '#f4f4f4',
-              cursor: 'pointer',
-              borderBottom: '1px solid #ccc',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}
+            className="accordion-header"
           >
             {item.label}
             <span
+              className="accordion-arrow"
               style={{
-                transition: 'transform 0.3s',
                 transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)'
               }}
             >
@@ -50,9 +39,8 @@ const Sidebar = () => {
 
           {/* Accordion Content */}
           {openIndex === index && (
-            <div style={{ background: '#fff', borderBottom: '1px solid #ccc' }}>
+            <div className="accordion-content">
               {item.children ? (
-                // If has sub-items
                 item.children.map((sub, subIndex) => (
                   <div key={subIndex}>
                     {sub.children ? (
@@ -60,20 +48,12 @@ const Sidebar = () => {
                         {/* Sub-Accordion Header */}
                         <div
                           onClick={() => toggleSub(subIndex)}
-                          style={{
-                            padding: '10px 20px',
-                            background: '#f9f9f9',
-                            cursor: 'pointer',
-                            borderBottom: '1px solid #eee',
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center'
-                          }}
+                          className="sub-accordion-header"
                         >
                           {sub.label}
                           <span
+                            className="sub-accordion-arrow"
                             style={{
-                              transition: 'transform 0.3s',
                               transform: openSubIndex === subIndex ? 'rotate(180deg)' : 'rotate(0deg)'
                             }}
                           >
@@ -83,15 +63,9 @@ const Sidebar = () => {
 
                         {/* Nested Content */}
                         {openSubIndex === subIndex && (
-                          <div style={{ background: '#fafafa' }}>
+                          <div className="nested-content">
                             {sub.children.map((nested, nestedIndex) => (
-                              <div
-                                key={nestedIndex}
-                                style={{
-                                  padding: '10px 40px',
-                                  borderBottom: '1px solid #f0f0f0'
-                                }}
-                              >
+                              <div key={nestedIndex} className="nested-item">
                                 {nested.label}
                               </div>
                             ))}
@@ -100,21 +74,12 @@ const Sidebar = () => {
                       </>
                     ) : (
                       // Simple sub-item without deeper children
-                      <div
-                        style={{
-                          padding: '10px 20px',
-                          background: '#f9f9f9',
-                          borderBottom: '1px solid #eee'
-                        }}
-                      >
-                        {sub.label}
-                      </div>
+                      <div className="simple-sub-item">{sub.label}</div>
                     )}
                   </div>
                 ))
               ) : (
-                // If no children, just show content
-                <div style={{ padding: '10px' }}>{item.content}</div>
+                <div className="simple-content">{item.content}</div>
               )}
             </div>
           )}

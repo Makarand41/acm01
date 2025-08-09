@@ -13,7 +13,7 @@
 .vsection {
   height: 150px;
   border-right: 2px solid black;
-  width: 800px;              
+  width: 840px;              
   /* overflow-x: auto;          */
   /* white-space: nowrap;       */
 }
@@ -25,12 +25,23 @@
   padding: 10px;
 }
 
+/* .tool {
+  width: 60px;
+  text-align: center;
+  flex-shrink: 0;           
+} */
+
 .tool {
   width: 60px;
   text-align: center;
-  flex-shrink: 0;           /* prevent shrinking */
-
+  flex-shrink: 0;
+  display: flex;               /* Enable flexbox */
+  flex-direction: column;      /* Stack image above text */
+  align-items: center;         /* Center horizontally */
 }
+
+
+
 
 .tool img {
   max-width: 100%;
@@ -48,6 +59,8 @@
   height: 150px;
   border-right: 2px solid black;
   width: 180px;  
+  padding-left: 15px;
+  padding-right: 3px;
 }
 
 .otools {
