@@ -1,5 +1,3 @@
-// sidebarData.js
-
 const items = [
   { label: 'Program Summary', content: 'Content for Program Summary' },
   { label: 'Program Schedule', content: 'Content for Program Schedule' },
@@ -34,7 +32,10 @@ const items = [
       { label: 'Project3', content: 'Cost analytics for Project3' }
     ]
   },
-  { label: 'Reports & Charts', content: 'Content for Reports & Charts' }
+  { label: 'Reports & Charts', content: 'Content for Reports & Charts' },
+  
+  // New File Accordion item without static content
+  { label: 'File' }
 ];
 
 export default items;
