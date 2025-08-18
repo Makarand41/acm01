@@ -8,6 +8,7 @@ import Construction from "./pages/Construction/Construction"
 import Layout from "./pages/Layout/Layout";
 import Functions from "./pages/Functions/Functions";
 import Report from "./pages/Report/Report";
+import TimeLogo from "./components/Mainbar/TimeLogo";
 
 
 const App = () => {
@@ -22,7 +23,12 @@ const App = () => {
         <Route path="/construction" element={<Construction />} />
         <Route path="/layout" element={<Layout />} />
         <Route path="/function" element={<Functions />} />
-        <Route path="/Report" element={<Report />} /> </Routes>
+        <Route path="/Report" element={<Report />} /> 
+       
+        
+        </Routes>
+
+        
         
       </BrowserRouter>
     </>
