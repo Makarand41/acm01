@@ -42,12 +42,13 @@ const Vector1 = () => {
         </>
       )}
 
-      {activeSection === "beta" && <Beta />}
-      {activeSection === "milestone" && <Milestone />}
-      {activeSection === "percent" && <Percent />}
-      {activeSection === "rayleigh" && <Rayleigh />}
-      {activeSection === "trapezoid" && <Trapezoid />}
-      {activeSection === "weibull" && <Weibull />}
+      {activeSection === "beta" && <Beta setActiveSection={setActiveSection} />}
+{activeSection === "milestone" && <Milestone setActiveSection={setActiveSection} />}
+{activeSection === "percent" && <Percent setActiveSection={setActiveSection} />}
+{activeSection === "rayleigh" && <Rayleigh setActiveSection={setActiveSection} />}
+{activeSection === "trapezoid" && <Trapezoid setActiveSection={setActiveSection} />}
+{activeSection === "weibull" && <Weibull setActiveSection={setActiveSection} />}
+
     
     </>
   )
