@@ -260,15 +260,11 @@ const darkBlueCell = {
   fontWeight: "bold",
 };
 
-const rowStyle = {
-  backgroundColor: "#1d1d61ff",
-};
-
 const fyCellStyle = {
   border: "1px solid #ccc",
   textAlign: "center",
   padding: "8px",
-  backgroundColor: "#e6f0ff",
+  backgroundColor: "#e8e8eeff",
 };
 
 export default Calender;
