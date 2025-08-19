@@ -1,99 +1,3 @@
-// import React from "react";
-// import "./Calendar.css";
-
-// const Calendar = () => {
-//   return (
-//     <div className="calendar-container">
-//       {/* Header Options */}
-//       <div className="calendar-options">
-//         <label>
-//           <input type="radio" name="year-type" defaultChecked /> Base Year
-//         </label>
-//         <label>
-//           <input type="radio" name="year-type" /> Then Year
-//         </label>
-//         <label>
-//           <input type="radio" name="year-type" /> Same Year
-//         </label>
-//       </div>
-
-//       {/* Input Fields */}
-//       <div className="calendar-inputs">
-//         <label>
-//           $ Appropr: <input type="text" defaultValue="3010" />
-//         </label>
-//         <label>
-//           FY: <input type="text" />
-//         </label>
-//         <label>
-//           Units: <input type="text" />
-//         </label>
-//       </div>
-
-//       {/* Table */}
-//       <table className="calendar-table">
-//         <thead>
-//           <tr>
-//             <th>Yearly Value</th>
-//             <th>FY 2020</th>
-//             <th>FY 2021</th>
-//             <th>FY 2022</th>
-//             <th>FY 2023</th>
-//             <th>FY 2024</th>
-//             <th>FY 2025</th>
-//             <th>FY 2026</th>
-//             <th>FY 2027</th>
-//             <th>FY 2028</th>
-//             <th>FY 2029</th>
-//             <th>FY 2030</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           <tr>
-//             <td>Yearly Value</td>
-//             <td></td>
-//             <td></td>
-//             <td></td>
-//             <td></td>
-//             <td></td>
-//             <td>650</td>
-//             <td>600</td>
-//             <td></td>
-//             <td></td>
-//             <td></td>
-//             <td></td>
-//           </tr>
-//         </tbody>
-//       </table>
-
-//       {/* Footer */}
-//       <div className="calendar-footer">
-//         <p>
-//           <span className="label">Total:</span>{" "}
-//           <span className="total">1250</span>
-//         </p>
-//         <p>
-//           <span className="label">Status:</span>{" "}
-//           <span className="status-complete">Complete</span>
-//         </p>
-//         <p>
-//           <span className="label">Lead/Lag:</span> None
-//         </p>
-//         <p>
-//           <span className="label">RISK Specification:</span> None
-//         </p>
-//       </div>
-
-//       {/* Buttons */}
-//       <div className="calendar-buttons">
-//         <button className="btn">Cost</button>
-//         <button className="btn">Non-Cost</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Calendar;
 import React, { useState } from "react";
 import cost from "../../assets/images/boxB/cost.jpg";
 import non_cost from "../../assets/images/boxB/non_cost.jpg";
@@ -125,7 +29,6 @@ const Calender = () => {
               key={option}
               style={{
                 marginRight: "20px",
-                //marginLeft: "0px",
                 fontWeight: selectedOption === option ? "bold" : "500",
                 cursor: "pointer",
               }}
@@ -265,6 +168,10 @@ const fyCellStyle = {
   textAlign: "center",
   padding: "8px",
   backgroundColor: "#e8e8eeff",
+};
+
+const rowStyle = {
+  backgroundColor: "#f9f9f9", // 👈 added missing style
 };
 
 export default Calender;

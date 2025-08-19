@@ -1,0 +1,21 @@
+img{
+    width: 80px;
+    height: 80px;
+}
+
+.box1 {
+  display: flex;         /* Make it a flexbox */
+  justify-content: center; /* Center images horizontally */
+  gap: 10px;               /* Add space between images */     
+  margin-top: 20px;   
+}
+
+.box2{
+    
+   
+    text-align: center;
+}
+
+.box2 p{
+color: #456882
+}

@@ -1,0 +1,14 @@
+.box1{
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.Mainbox{
+    display: flex;
+}
