@@ -4,7 +4,7 @@ import vector2 from '../../assets/images/boxA/vector2.png';
 import timeLogo from '../../assets/images/boxA/timeLogo.png';
 import calenderLogo from '../../assets/images/boxA/calenderLogo.png';
 
-const InfoBar = ({ onToggleTime,onToggleCalender }) => {
+const InfoBar = ({ onToggleTime,onToggleCalender,onToggleVector1,onToggleVector2 }) => {
   return (
     <div className="BoxA">
       {/* Top form */}
@@ -36,10 +36,10 @@ const InfoBar = ({ onToggleTime,onToggleCalender }) => {
         <div className="tool"  onClick={onToggleCalender}            style={{ filter: "brightness(0.8)" }}>
           <img src={calenderLogo} alt="calendar"/>
         </div>
-        <div className="tool" style={{ filter: "brightness(0.2)" }}>
+        <div className="tool"  onClick={onToggleVector1}        style={{ filter: "brightness(0.2)" }}>
           <img src={vector1} alt="vector1"/>
         </div>
-        <div className="tool" style={{ filter: "brightness(0.2)" }}>
+        <div className="tool" onClick={onToggleVector2}     style={{ filter: "brightness(0.2)" }}>
           <img src={vector2} alt="vector2"/>
         </div>
       </div>

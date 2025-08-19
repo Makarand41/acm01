@@ -5,6 +5,9 @@ import './Mainbar.css';
 import InfoBar from './InfoBar';
 import TimeLogo from './TimeLogo';
 import Calender from './Calender';
+import Vector1 from './Vector1';
+import Vector2 from './Vector2';
+
 
 const Mainbar = () => {
   const [activeSection, setActiveSection] = useState(null); 
@@ -22,6 +25,8 @@ const Mainbar = () => {
       <InfoBar 
         onToggleTime={() => setActiveSection("time")} 
         onToggleCalender={() => setActiveSection("calendar")}
+        onToggleVector1={() => setActiveSection("vector1")}
+        onToggleVector2={() => setActiveSection("vector2")}
       />
 
       {/* Dynamic section */}
@@ -36,6 +41,31 @@ const Mainbar = () => {
           <Calender />
         </div>
       )}
+
+
+      {activeSection === "vector1" && (
+        <div className="dynamic-section">
+          <Vector1 />
+        </div>
+      )}
+
+
+      {activeSection === "vector2" && (
+        <div className="dynamic-section">
+          <Vector2 />
+        </div>
+      )}
+
+      
+
+
+
+
+
+
+
+
+
     </div>
   );
 };
