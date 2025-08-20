@@ -3,16 +3,21 @@ img{
     height: 80px;
 }
 
-.box1 {
-  display: flex;         /* Make it a flexbox */
-  justify-content: center; /* Center images horizontally */
-  gap: 10px;               /* Add space between images */     
+/* .box1 {
+  display: flex;         
+  justify-content: center; 
+  gap: 10px;                   
   margin-top: 20px;   
+} */
+.box1 {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .box2{
-    
-   
     text-align: center;
 }
 
