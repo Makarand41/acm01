@@ -6,7 +6,7 @@ import percent from "../../assets/images/vector1/percent.jpg";
 import rayleigh from "../../assets/images/vector1/rayleigh.jpg";  
 import trapezoid from "../../assets/images/vector1/trapezoid.jpg";  
 import weibull from "../../assets/images/vector1/weibull.jpg";  
-import './Beta.css'
+
 
 const Weibull = ({ setActiveSection }) => {  // 👈 receive callback from parent
   return (

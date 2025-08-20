@@ -5,102 +5,84 @@ import percent from "../../assets/images/vector1/percent.jpg";
 import rayleigh from "../../assets/images/vector1/rayleigh.jpg";
 import trapezoid from "../../assets/images/vector1/trapezoid.jpg";
 import weibull from "../../assets/images/vector1/weibull.jpg";
-import "./Beta.css";
+import styles from "./Beta.module.css";
 
 const Beta = ({ setActiveSection }) => {
   return (
     <>
-      <div className="container">
-        {/* Left Side Icons */}
-        <div className="sidebar">
-          <img src={beta} alt="Beta" onClick={() => setActiveSection("beta")} />
-          <img
-            src={weibull}
-            alt="Weibull"
-            onClick={() => setActiveSection("weibull")}
-          />
-          <img
-            src={rayleigh}
-            alt="Rayleigh"
-            onClick={() => setActiveSection("rayleigh")}
-          />
-          <img
-            src={trapezoid}
-            alt="Trapezoid"
-            onClick={() => setActiveSection("trapezoid")}
-          />
-          <img
-            src={percent}
-            alt="Percent"
-            onClick={() => setActiveSection("percent")}
-          />
-          <img
-            src={milestone}
-            alt="Milestone"
-            onClick={() => setActiveSection("milestone")}
-          />
+      <div className={styles.container}>
+        <div className={styles.sidebar}>
+          <img src={beta} onClick={() => setActiveSection("beta")} alt="beta" />
+          <img src={weibull} onClick={() => setActiveSection("weibull")} alt="weibull" />
+          <img src={rayleigh} onClick={() => setActiveSection("rayleigh")} alt="rayleigh" />
+          <img src={trapezoid} onClick={() => setActiveSection("trapezoid")} alt="trapezoid" />
+          <img src={percent} onClick={() => setActiveSection("percent")} alt="percent" />
+          <img src={milestone} onClick={() => setActiveSection("milestone")} alt="milestone" />
         </div>
 
-        {/* Main Form Section */}
-        <div className="form-section">
-          <p className="title">Reference Cost Equation/Value</p>
-          <input type="text" className="input-wide" value="PayUC$ * ISQty" />
+        <div className={styles.formSection}>
 
-          <div className="row">
+          <div>
+          <span className={styles.title}>Reference Cost Equation/Value</span>
+          <br/>
+          <input type="text" className={styles.inputWide} value="PayUC$ * ISQty" readOnly />
+          </div>
+          <br/>
+
+          <div >
+
+            
             <label>$ Appropr:</label>
-            <input type="text" />
+            <span style={{marginRight:"20px",marginLeft:"10px"}}><input type="text" /></span>
+
             <label>FY:</label>
-            <input type="text" />
+            <span style={{marginRight:"20px",marginLeft:"10px"}}><input type="text" /></span>
+
             <label>Units:</label>
-            <input type="text" />
+             <span style={{marginRight:"20px",marginLeft:"10px"}}><input type="text" /></span>
+          </div>
+          <br/>
+
+          <div>
+            <b>Spent (%):</b>
+            <span style={{marginLeft:"10px"}}><input type="text" placeholder="ID" className={styles.idInput} /></span>
           </div>
 
-          <div className="row">
-            <strong>Spent (%):</strong>
-            {/* <input type="text" />
-            <label>ID</label> */}
-            <input type="text" placeholder="ID" class="id-input" />
-          </div>
 
-          <div className="row">
-            <label>
-              <strong>Time (%):</strong>
-            </label>
-            {/* <input type="text" />
-            <label>ID</label> */}
-            <input type="text" placeholder="ID" class="id-input" />
+          <br/>
+          <div >
+            <label><b>Time (%):</b></label>
+             <span style={{marginLeft:"10px"}}><input type="text" placeholder="ID" className={styles.idInput} /></span>
           </div>
-
-          <div className="row">
-            <label>
-              <strong>Peakness (%):</strong>
-            </label>
-            <select>
+        <br/>
+          <div >
+            <label> <b>Peakness (%):</b> </label>
+             <select style={{ width: "200px" }}>
               <option></option>
             </select>
           </div>
 
-          <p className="status">
+          <p className={styles.status}>
             Status: <span>Value missing</span>
           </p>
 
-          <hr className="divider" />
+          <hr className={styles.divider} />
 
-          <div className="row">
+          <div className={styles.row}>
             <label>
-              <strong>Calculate:</strong>
+              <b>Calculate:</b>
             </label>
             <input type="text" />
+
             <label>
-              <strong>Lead/Lag:</strong> None
+              <b>Lead/Lag:</b> None
             </label>
           </div>
 
-          <div className="row">
+          <div className={styles.row}>
             <label>
-              <strong>RISK Specification:</strong>
+              <b>RISK Specification:</b> None
             </label>
-            <span>None</span>
           </div>
         </div>
       </div>
