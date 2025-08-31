@@ -55,9 +55,12 @@ const Trapezoid = ({ setActiveSection }) => {
         <br />
         {/* Cost row */}
         <div>
-          <label>$ Appropr:</label>
+          <span style={{ color: "green" }}>
+            <b>$</b>
+          </span>
+          <label> Approp:</label>
           <span style={{ marginRight: "20px", marginLeft: "10px" }}>
-            <input type="text" />
+            <input type="text" defaultValue="3010" />
           </span>
 
           <label>FY:</label>

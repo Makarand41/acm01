@@ -54,9 +54,12 @@ const Beta = ({ setActiveSection }) => {
           <br />
 
           <div>
-            <label>$ Appropr:</label>
+            <span style={{ color: "green" }}>
+              <b>$</b>
+            </span>
+            <label> Approp:</label>
             <span style={{ marginRight: "20px", marginLeft: "10px" }}>
-              <input type="text" />
+              <input type="text" defaultValue="3010" />
             </span>
 
             <label>FY:</label>
@@ -72,7 +75,7 @@ const Beta = ({ setActiveSection }) => {
           <br />
 
           <div>
-            <b>Spent (%):</b>
+            <b>Spent (%):</b> &nbsp;
             <span style={{ marginLeft: "10px" }}>
               <input type="text" placeholder="ID" className={styles.idInput} />
             </span>
@@ -81,7 +84,7 @@ const Beta = ({ setActiveSection }) => {
           <br />
           <div>
             <label>
-              <b>Time (%):</b>
+              <b>Time (%):</b> &nbsp;&nbsp;&nbsp;
             </label>
             <span style={{ marginLeft: "10px" }}>
               <input type="text" placeholder="ID" className={styles.idInput} />
@@ -91,7 +94,7 @@ const Beta = ({ setActiveSection }) => {
           <div>
             <label>
               {" "}
-              <b>Peakness (%):</b>{" "}
+              <b>Peakness :</b> &nbsp;&nbsp;
             </label>
             <select style={{ width: "200px" }}>
               <option></option>

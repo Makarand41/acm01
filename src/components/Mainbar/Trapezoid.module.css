@@ -95,8 +95,8 @@
 }
 
 .divider {
-  margin-left: 0px;
-  width: 90%;
+  margin-left: 1px;
+  width: 680px;
   border: none;
   border-top: 1px solid #413e3e;
   margin-top: 15px;
