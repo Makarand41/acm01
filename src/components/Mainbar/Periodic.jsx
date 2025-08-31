@@ -13,17 +13,21 @@ const Periodic = () => {
         {/* ✅ Removed Equation/Value from here */}
         <div
           className="side-icons"
-          style={{ display: "flex", marginRight: "150px" }}
+          style={{ display: "flex", marginLeft: "750px" }}
         >
           <button
-            className={`side-icon-btn ${activeTab === "periodic" ? "active" : ""}`}
+            className={`side-icon-btn ${
+              activeTab === "periodic" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("periodic")}
           >
             <img src={periodicIcon} alt="Periodic" className="icon-img" />
             Periodic
           </button>
           <button
-            className={`side-icon-btn ${activeTab === "constant" ? "active" : ""}`}
+            className={`side-icon-btn ${
+              activeTab === "constant" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("constant")}
           >
             <img src={constantIcon} alt="Constant" className="icon-img" />

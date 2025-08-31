@@ -1,10 +1,10 @@
-.constant-page {
+ .constant-page {
   font-family: Arial, sans-serif;
-  padding: 20px;
+  padding: 17px;
   max-width: 650px;
-  margin: auto;
   color: #000;
-}
+  margin-top: -35px;
+} 
 
 .equation-label {
   color: red;
@@ -19,6 +19,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 
 .calc-section {
   margin-top: 20px;

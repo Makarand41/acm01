@@ -1,48 +1,139 @@
+import React from "react";
+import beta from "../../assets/images/vector1/beta.jpg";
+import milestone from "../../assets/images/vector1/milestone.jpg";
+import percent from "../../assets/images/vector1/percent.jpg";
+import rayleigh from "../../assets/images/vector1/rayleigh.jpg";
+import trapezoid from "../../assets/images/vector1/trapezoid.jpg";
+import weibull from "../../assets/images/vector1/weibull.jpg";
+import styles from "./Trapezoid.module.css";
 
-
-import React from 'react'
-import beta from "../../assets/images/vector1/beta.jpg";  
-import milestone from "../../assets/images/vector1/milestone.jpg";  
-import percent from "../../assets/images/vector1/percent.jpg";  
-import rayleigh from "../../assets/images/vector1/rayleigh.jpg";  
-import trapezoid from "../../assets/images/vector1/trapezoid.jpg";  
-import weibull from "../../assets/images/vector1/weibull.jpg";  
-
-
-const Trapezoid = ({ setActiveSection }) => {  // 👈 receive callback from parent
+const Trapezoid = ({ setActiveSection }) => {
   return (
-    <>
-      <div className='Mainbox'>
+    <div className={styles.container}>
+      {/* Sidebar */}
+      <div className={styles.sidebar}>
+        <img src={beta} onClick={() => setActiveSection("beta")} alt="beta" />
+        <img
+          src={weibull}
+          onClick={() => setActiveSection("weibull")}
+          alt="weibull"
+        />
+        <img
+          src={rayleigh}
+          onClick={() => setActiveSection("rayleigh")}
+          alt="rayleigh"
+        />
+        <img
+          src={trapezoid}
+          onClick={() => setActiveSection("trapezoid")}
+          alt="trapezoid"
+        />
+        <img
+          src={percent}
+          onClick={() => setActiveSection("percent")}
+          alt="percent"
+        />
+        <img
+          src={milestone}
+          onClick={() => setActiveSection("milestone")}
+          alt="milestone"
+        />
+      </div>
 
- <p>trapezoid</p>
+      {/* Form Section */}
+      <div className={styles.formSection}>
+        <div>
+          <span className={styles.title}>Equation/Value</span>
+          <br />
+          <input
+            type="text"
+            className={styles.inputWide}
+            value="PayUC$ * ISQty"
+            //readOnly
+          />
+        </div>
+        <br />
+        {/* Cost row */}
+        <div>
+          <label>$ Appropr:</label>
+          <span style={{ marginRight: "20px", marginLeft: "10px" }}>
+            <input type="text" />
+          </span>
 
+          <label>FY:</label>
+          <span style={{ marginRight: "20px", marginLeft: "10px" }}>
+            <input type="text" />
+          </span>
 
-        <div className='box1'>
-          <img src={beta} onClick={() => setActiveSection("beta")} />
-          <img src={milestone} onClick={() => setActiveSection("milestone")}/>
-          <img src={percent} onClick={() => setActiveSection("percent")}/>
-          <img src={rayleigh} onClick={() => setActiveSection("rayleigh")}/>
-          <img src={trapezoid} onClick={() => setActiveSection("trapezoid")}/>
-          <img src={weibull} onClick={() => setActiveSection("weibull")}/>
+          <label>Units:</label>
+          <span style={{ marginRight: "20px", marginLeft: "10px" }}>
+            <input type="text" />
+          </span>
         </div>
 
-        <div className='box2'>
-          <label>Reference Cost Equation/Value</label>
-          <input/>
-          <br/>
-          <label>Reference Cost Equation/Value</label>
-          <input/>
-          <br/>
-          <label>Reference Cost Equation/Value</label>
-          <input/>
-          <br/>
-          <label>Reference Cost Equation/Value</label>
-          <input/>
+        {/* Dates */}
+        <div className={styles.row}>
+          <label>
+            <b>Start Date:</b>
+          </label>
+          <input type="text" />
+          <label>
+            <b>Finish Date:</b>
+          </label>
+          <input type="text" />
+        </div>
+
+        {/* Spread based on */}
+        <div className={styles.row}>
+          <label>Spread based on:</label>
+          <input type="radio" name="spread" defaultChecked /> Schedule
+          <input type="radio" name="spread" /> Cost
+        </div>
+
+        {/* Ramp Up */}
+        <div className={styles.row}>
+          <label>Ramp Up (%):</label>
+          <input type="text" placeholder="ƒx" className={styles.idInput} />
+        </div>
+
+        <div className={styles.row}>
+          <label>Steady State (%):</label>
+          <input type="text" placeholder="ƒx" className={styles.idInput} />
+        </div>
+
+        {/* Ramp Down */}
+        <div className={styles.row}>
+          <label>Ramp Down (%):</label>
+          <span>Unknown</span>
+        </div>
+
+        {/* Status */}
+        <p className={styles.status}>
+          <b>Status:</b> <span style={{ color: "red" }}>Value missing</span>
+        </p>
+
+        <hr className={styles.divider} />
+
+        {/* Calculate + Lead/Lag */}
+        <div className={styles.row}>
+          <label>
+            <b>Calculate:</b>
+          </label>
+          <button className={styles.annualBtn}>Annual</button>
+          <label className={styles.label}>
+            <b>Lead/Lag:</b> None
+          </label>
+        </div>
+
+        {/* Risk */}
+        <div className={styles.row}>
+          <label>
+            <b>RISK Specification:</b> None
+          </label>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Trapezoid
-
+export default Trapezoid;
