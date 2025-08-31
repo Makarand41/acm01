@@ -1,4 +1,3 @@
-// Mainbar.jsx
 import React, { useState } from 'react';
 import './Mainbar.css';
 
@@ -8,10 +7,9 @@ import Calender from './Calender';
 import Vector1 from './Vector1';
 import Vector2 from './Vector2';
 
-
 const Mainbar = () => {
-  const [activeSection, setActiveSection] = useState(null); 
-  // can be "time" or "calendar"
+  const [activeSection, setActiveSection] = useState("time"); 
+  const [vector1Key, setVector1Key] = useState(0);  // 👈 add key for Vector1 reset
 
   return (
     <div className="mainbar">
@@ -25,7 +23,10 @@ const Mainbar = () => {
       <InfoBar 
         onToggleTime={() => setActiveSection("time")} 
         onToggleCalender={() => setActiveSection("calendar")}
-        onToggleVector1={() => setActiveSection("vector1")}
+        onToggleVector1={() => {
+          setActiveSection("vector1");
+          setVector1Key(prev => prev + 1); // 👈 each click resets Vector1
+        }}
         onToggleVector2={() => setActiveSection("vector2")}
       />
 
@@ -42,30 +43,18 @@ const Mainbar = () => {
         </div>
       )}
 
-
       {activeSection === "vector1" && (
         <div className="dynamic-section">
-          <Vector1 />
+          {/* 👇 key ensures Vector1 is reset */}
+          <Vector1 key={vector1Key} />
         </div>
       )}
-
 
       {activeSection === "vector2" && (
         <div className="dynamic-section">
           <Vector2 />
         </div>
       )}
-
-      
-
-
-
-
-
-
-
-
-
     </div>
   );
 };
