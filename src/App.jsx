@@ -18,7 +18,7 @@ const AppLayout = () => {
   // Hide navbar on login & welcome
   const hideNavbar =
     location.pathname === "/login" ||
-    location.pathname === "/welcome" ||
+    // location.pathname === "/welcome" ||
     location.pathname === "/";
 
   return (

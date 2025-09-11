@@ -1,20 +1,16 @@
-/* Save as: Login.css - very simple beginner styles */
+/* src/pages/Login.module.css */
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f3f4f6;
-  margin: 0;
-}
-
-.login-container {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
 }
 
-.login-box {
+.box {
   background: #fff;
   padding: 24px;
   border-radius: 8px;
@@ -24,12 +20,12 @@ body {
   text-align: center;
 }
 
-.login-box h2 {
+.box h2 {
   margin: 0 0 14px 0;
   color: #111827;
 }
 
-.login-form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -60,7 +56,9 @@ input {
   font-weight: 600;
 }
 
-.btn:hover { opacity: 0.95; }
+.btn:hover {
+  opacity: 0.95;
+}
 
 .error {
   background: #fee2e2;
@@ -70,8 +68,19 @@ input {
   font-size: 13px;
 }
 
-.note { margin-top: 12px; font-size: 13px; color: #6b7280; }
+.note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
 
-a { color: #2563eb; text-decoration: none; }
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
 
-@media (max-width: 420px) { .login-box { padding: 18px; } }
+@media (max-width: 420px) {
+  .box {
+    padding: 18px;
+  }
+}

@@ -1,52 +1,35 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ import navigate
-import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css"; // ✅ import module
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const navigate = useNavigate(); // ✅ initialize navigate
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Email validation
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      setError("Please enter a valid email");
-      return;
+    if (email === "admin" && password === "admin") {
+      navigate("/welcome");
+    } else {
+      alert("Invalid credentials");
     }
-
-    // Password validation
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters");
-      return;
-    }
-
-    setError("");
-
-    console.log("Login submitted", { email, password });
-
-    // ✅ redirect to Welcome page
-    navigate("/welcome");
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
+    <div className={styles.container}>
+      <div className={styles.box}>
         <h2>Sign in</h2>
 
-        <form onSubmit={handleSubmit} className="login-form">
-          {error && <div className="error">{error}</div>}
-
+        <form onSubmit={handleSubmit} className={styles.form}>
           <label>
-            Email
+            Username
             <input
-              type="email"
+              type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
+              placeholder="Enter username"
               required
             />
           </label>
@@ -62,14 +45,10 @@ export default function Login() {
             />
           </label>
 
-          <button type="submit" className="btn">
+          <button type="submit" className={styles.btn}>
             Sign in
           </button>
         </form>
-
-        <p className="note">
-          Don't have an account? <a href="#">Sign up</a>
-        </p>
       </div>
     </div>
   );
