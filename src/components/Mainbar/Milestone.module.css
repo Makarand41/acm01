@@ -2,7 +2,8 @@
 .container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  margin-bottom: 20px;
+
   background: #fff;
   font-family: Arial, sans-serif;
 }
