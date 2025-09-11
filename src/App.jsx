@@ -26,7 +26,7 @@ const AppLayout = () => {
       {!hideNavbar && <Navbar />}{" "}
       {/* Render Navbar only if not login/welcome */}
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/home" element={<Home />} />
